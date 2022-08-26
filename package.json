@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@hmscore/hms-js-base": "^6.1.0-300",
+    "@hw-hmscore/hms-iap": "^6.0.0-301",
+    "@hw-hmscore/hms-js-base": "^6.5.0-300"
+  }
+}

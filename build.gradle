@@ -1,0 +1,47 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.huawei.ohos.app'
+
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#section1112183053510
+
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\DouxDertod\\.ohos\\config\\auto_debug_huaweipaytest_30086000540703407.p12')
+            storePassword '0000001BA31AF68F857AAD27C425DA670D6C23891C213B6118619627C194A1D9B211098B5A7F720782CD10'
+            keyAlias = 'debugKey'
+            keyPassword '0000001B470FBA8AE9773E07F3D7A33BFE97EFE05A84342E527DEC47F8A11549CDC66006FDFB12C60B2641'
+            signAlg = 'SHA256withECDSA'
+            profile file('C:\\Users\\DouxDertod\\.ohos\\config\\测试Debug.p7b')
+            certpath file('C:\\Users\\DouxDertod\\.ohos\\config\\auto_debug_huaweipaytest_30086000540703407.cer')
+        }
+    }
+    compileSdkVersion 6
+}
+
+buildscript {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+    dependencies {
+        classpath 'com.huawei.ohos:hap:3.0.5.11'
+        classpath 'com.huawei.ohos:decctest:1.2.7.9'
+        // 添加agconnect服务依赖
+        classpath 'com.huawei.agconnect:agcp-harmony:1.0.0.300'
+    }
+}
+
+allprojects {
+    repositories {
+        maven {
+            url 'https://repo.huaweicloud.com/repository/maven/'
+        }
+        maven {
+            url 'https://developer.huawei.com/repo/'
+        }
+    }
+}
